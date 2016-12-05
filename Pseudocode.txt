@@ -1,0 +1,29 @@
+1. Display the main menu
+2. Prompt the user to enter a value between 1 - 4
+3. If the user entered 1
+    3a. Prompt the user to enter the information of the book they would like to purchase
+    3b. Search by title of book
+    3c. Subtract the amount of the book purchased from the database
+    3d. Validate that the quantity purchased is not greater than the amount on hand
+    3e. Delete the book from the database if the book was found and the database had enough books
+    3f. Display the information, including the total, sales tax, and total with sales tax
+    3g. Ask the user if they would like to process another transaction
+4. If the user entered 2
+    4a. Prompt the user to enter a value between 1 - 5
+    4b. If the user entered 1
+        4ba. Ask the user what the title of the book was
+        4bb. Search the database for a book with the same title and display the information if it's found
+    4c. If the user entered 2
+        4ca. Ask the user for the ISBN, author, title, publisher, date, quantity, cost, and retail
+        4cb. Using the information given, add the book to the database
+    4d. If the user entered 3
+        4da. Ask the user for the title of the book they would like to edit
+        4db. Search the book list by the title of the book
+        4dc. If the book was found, prompt the user what they would like to edit about the book
+        4dd. Get the user's information and update the book in the book list
+    4e. If the user entered 4
+        4ea. Ask the user for the title of the book they would like to delete
+        4eb. Search the book list by the title of the book
+        3ec. If found, remove the book from the book list
+    4f. If the user entered 5
+        4fa. Return to the previous menu

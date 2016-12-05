@@ -1,0 +1,5 @@
+0002,asdf,author,publisher,11-16-2015,1,69.69,69.69
+0003,Edited,author,publisher,11-16-2016,9,70.69,69.69
+0004,wat,Ididitagain,Fuckmylife,1-2-1993,1,90.1,93.45
+0001,aasdf,asdfasdf,ioij,1-1-1997,23,19.99,24.99,3
+0005,notcomplete,asdffe,iojfas,1-1-9348,24,1,01.48
