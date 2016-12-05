@@ -27,3 +27,27 @@
         3ec. If found, remove the book from the book list
     4f. If the user entered 5
         4fa. Return to the previous menu
+5. If the user entered 3
+    5a. Prompt the user to enter a value between 1 - 7
+    5b. If the user entered 1
+        5ba. Display the information of every book in the database
+    5c. If the user entered 2
+        5ca. Display the information of every book in the database
+        5cb. Total up the wholesale cost of each book and display it to the user
+    5d. If the user entered 3
+        5da. Display the information of every book in the database
+        5db. Total up the retail cost of each book and display it to the user
+    5e. If the user entered 4
+        5ea. Sort the database by quantity
+        5eb. Display the books in order of greatest to least
+    5f. If the user entered 5
+        5fa. Sort the database by wholesale cost
+        5fb. Display the books in order of greatest to least
+    5g. If the user entered 6
+        5ga. Sort the database by date
+        5gb. Display the books in order of oldest to newest
+    5h. If the user entered 7
+        5ha. Return to the previous menu
+6. If the user entered 4
+    6a. Write any changes to the database
+    6b. Exit the program

@@ -20,12 +20,7 @@ public:
 	void printInfo();
 	string toString();
 	static Book toBook(string);
-
 	bool equals(Book book);
-	
-private:
-	static bool isValidBook(vector<string>);
-	static vector<string> split(string, char);
 };
 
 #endif

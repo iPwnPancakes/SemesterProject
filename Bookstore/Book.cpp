@@ -7,6 +7,9 @@ double wholesale, retail;
 string isbn, title, author, publisher;
 Date date;
 
+vector<string> split(string, char);
+bool isValidBook(string);
+
 Book::Book() {
 	isbn = "0000000000";
 	title = "Default";
@@ -84,8 +87,8 @@ string Book::toString() {
 
 Book Book::toBook(string str) {
 	Book book;
-	vector<string> tokens = Book::split(str, ','); 
-	if (isValidBook(tokens)) {
+	if (isValidBook(str)) {
+		vector<string> tokens = split(str, ',');
 		book = Book(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], stoi(tokens[5]), stod(tokens[6]), stod(tokens[7]));
 	}
 	else {
@@ -101,7 +104,8 @@ bool Book::equals(Book book) {
 	return false;
 }
 
-bool Book::isValidBook(vector<string> tokens) {
+bool isValidBook(string str) {
+	vector<string> tokens = split(str, ',');
 	if (tokens.size() == 8) {
 		for (int i = 0; i < tokens.size(); i++) {
 			if (tokens[i].empty()) {
@@ -113,7 +117,7 @@ bool Book::isValidBook(vector<string> tokens) {
 	return false;
 }
 
-vector<string> Book::split(string s, char delim) {
+vector<string> split(string s, char delim) {
 	stringstream ss(s);
 	string item;
 	vector<string> tokens;

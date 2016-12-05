@@ -19,7 +19,12 @@ void BookList::setBookList(vector<Book> blist) {
 }
 
 void BookList::addBook(Book book) {
-	// TODO addBook
+	bookList.push_back(book);
+}
+
+void BookList::removeBook(Book book) {
+	int index = BookList::getAt(book);
+	BookList::removeAt(index);
 }
 
 bool BookList::deleteBooks(Book book, int q) {
@@ -40,7 +45,74 @@ bool BookList::deleteBooks(Book book, int q) {
 }
 
 void BookList::editBook(Book book) {
-	// TODO editBook
+	int input;
+	int index = BookList::getAt(book);
+	do {
+		cout << "What field would you like to edit?" << '\n';
+		cout << " 1. ISBN \n 2. Title \n 3. Author \n 4. Publisher \n 5. Date \n 6. Quantity \n 7. Wholesale cost \n 8. Retail cost \n";
+		cin >> input;
+	} while (input < 1 || input > 8);
+	cin.ignore();
+	switch (input) {
+	case 1: {
+		string ISBN;
+		cout << "Enter the new ISBN: \n";
+		getline(cin, ISBN);
+		book.isbn = ISBN;
+		break;
+	}
+	case 2: {
+		string t;
+		cout << "Enter the new title: \n";
+		getline(cin, t);
+		book.title = t;
+		break;
+	}
+	case 3: {
+		string a;
+		cout << "Enter the new author: \n";
+		getline(cin, a);
+		book.author = a;
+		break;
+	}
+	case 4: {
+		string p;
+		cout << "Enter the new publisher: \n";
+		getline(cin, p);
+		book.publisher = p;
+		break;
+	}
+	case 5: {
+		string d;
+		cout << "Enter the new date: \n";
+		getline(cin, d);
+		book.date = Date::toDate(d);
+		break;
+	}
+	case 6: {
+		string q;
+		cout << "Enter the new quantity: \n";
+		getline(cin, q);
+		book.qty = stoi(q);
+		break;
+	}
+	case 7: {
+		string w;
+		cout << "Enter the new wholesale: \n";
+		getline(cin, w);
+		book.wholesale = stod(w);
+		break;
+	}
+	case 8: {
+		string r;
+		cout << "Enter the new retail: \n";
+		getline(cin, r);
+		book.retail = stod(r);
+		break;
+	}
+	}
+	cout << '\n';
+	BookList::setAt(index, book);
 }
 
 Book BookList::searchByISBN(string str) {

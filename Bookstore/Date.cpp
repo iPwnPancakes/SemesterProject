@@ -40,13 +40,11 @@ bool Date::olderThan(Date d) {
 	if (year < d.getYear()) {
 		return true;
 	}
-	else {
-		if (month < d.getMonth()) {
-			return true;
-		}
-		else {
-			return false;
-		}
+	else if (month < d.getMonth()) {
+		return true;
+	}
+	else if (day < d.getDay()) {
+		return true;
 	}
 	return false;
 }

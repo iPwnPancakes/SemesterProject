@@ -4,8 +4,6 @@
 
 using namespace std;
 
-void sort(vector<Book>, char);
-
 Report::Report() { };
 
 void Report::act() {
@@ -27,8 +25,7 @@ void Report::act() {
 				double total = 0;
 				for (int i = 0; i < list.size(); i++) {
 					total += list[i].wholesale;
-					cout << "Title: " << list[i].title << '\n';
-					cout << "Wholesale: " << list[i].wholesale << '\n';
+					list[i].printInfo();
 				}
 				cout << "Total Wholesale: " << total << "\n\n";
 				break;
@@ -37,9 +34,7 @@ void Report::act() {
 				double total = 0;
 				for (int i = 0; i < list.size(); i++) {
 					total += list[i].retail;
-					cout << "Title: " << list[i].title << '\n';
-					cout << "Retail: " << list[i].retail << '\n';
-					cout << '\n';
+					list[i].printInfo();
 				}
 				cout << "Total Retail: " << total << "\n\n";
 				break;
@@ -75,24 +70,10 @@ void Report::act() {
 	} while (choice != 7);
 }
 
-void Report::printMenu() {
+void Report::printMenu() {	
 	cout << "Serendipity Booksellers " << "Reports Menu\n";
 	cout << "1. Inventory Listing\n" << "2. Inventory Wholesale Value\n" << "3. Inventory Retail Value\n"
 		 << "4. Listing by Quantity\n" << "5. Listing by Cost\n" << "6. Listing by Age\n" 
 		 << "7. Return to Main Menu\n";
 	cout << "Enter Your Choice: \n";
-}
-// TODO finish sorting the vector
-void sort(vector<Book> preSort, char type) {
-	switch (type) {
-		case 'q': { // Sort by quantity (Greatest first)
-			
-		}
-		case 'c': { // Sort by cost (Wholesale) (Greatest first)
-
-		}
-		case 'd': { // Sort by age (Longest first)
-
-		}
-	}
 }

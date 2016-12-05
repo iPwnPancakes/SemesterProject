@@ -11,9 +11,10 @@ class BookList {
 public:
 	BookList();
 	static void setBookList(vector<Book>);
-	void addBook(Book book);
+	static void addBook(Book book);
+	static void removeBook(Book book);
 	static bool deleteBooks(Book book, int q);
-	void editBook(Book book);
+	static void editBook(Book book);
 	static Book searchByISBN(string str);
 	static Book searchByTitle(string str);
 	static vector<Book> searchByAuthor(string str);
